@@ -24,7 +24,7 @@
         <button
           class="bookmark custom-bg-opacity  rounded-full h-7 w-7 flex items-center justify-center absolute top-2 right-3"
         >
-          <img :src="bookmarkIcon" alt="" />
+          <img :src="list.isBookmarked === true ? bookmarkedIcon : bookmarkIcon" alt="" />
         </button>
 
         
@@ -38,12 +38,16 @@
 
 <script setup>
 import { useDataStore } from '@/stores/data'
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
 import bookmarkIcon from '@/assets/icon-bookmark-empty.svg'
+import bookmarkedIcon from '@/assets/icon-bookmark-full.svg'
 const dataStorage = useDataStore()
 const getImagePath = (imagePath) => {
   return new URL(imagePath, import.meta.url).href
 }
+
+
+
 
 const trending = dataStorage.dataStore.filter((trending) => trending.isTrending === true)
 </script>

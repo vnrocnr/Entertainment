@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col gap-5 lg:h-[556px]">
+  <main class="flex flex-col gap-5 h-[545px] lg:h-[556px]">
     <h1 class="text-white text-[20px]">Recommended for you</h1>
 
    
@@ -20,7 +20,7 @@
         <button
           class="bookmark custom-bg-opacity rounded-full h-7 w-7 flex items-center justify-center absolute top-2 right-3"
         >
-          <img :src="bookmarkIcon" alt="" />
+          <img :src="list.isBookmarked === true ? bookmarkedIcon : bookmarkIcon" alt="" />
         </button>
 
         <button class="absolute opacity-0 group-hover:opacity-100 group-hover:cursor-pointer left-[40px] top-10 lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
@@ -36,6 +36,7 @@
 import { useDataStore } from '@/stores/data'
 import { onMounted } from 'vue'
   import bookmarkIcon from '@/assets/icon-bookmark-empty.svg'
+  import bookmarkedIcon from '@/assets/icon-bookmark-full.svg'
 
 const dataStorage = useDataStore()
 

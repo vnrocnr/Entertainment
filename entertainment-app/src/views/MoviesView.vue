@@ -19,7 +19,7 @@
         
         
          <button class="bookmark group custom-bg-opacity hover:bg-white  hover:text-black bg-opacity-5 absolute h-10 w-10 top-2 right-2  rounded-full flex items-center justify-center">
-            <img :src="bookmarkIcon" alt="" class="group-hover:text-black h-4 w-4 ">
+            <img :src="list.isBookmarked === true ? bookmarkedIcon : bookmarkIcon" alt="" class="group-hover:text-black h-4 w-4 ">
         </button>
 
           <button class="absolute opacity-0 group-hover:opacity-100 group-hover:cursor-pointer left-[40px] top-10 lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
@@ -38,6 +38,8 @@
   import { onMounted, computed } from 'vue'
 
   import bookmarkIcon from '@/assets/icon-bookmark-empty.svg'
+import bookmarkedIcon from '@/assets/icon-bookmark-full.svg'
+
   
   const dataStorage = useDataStore()
   
