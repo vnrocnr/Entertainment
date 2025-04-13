@@ -18,11 +18,11 @@
           <p class="title  bottom-3 ">{{ list.title }}</p>
         
         
-         <button class="bookmark group custom-bg-opacity hover:bg-white  hover:text-black bg-opacity-5 absolute h-10 w-10 top-2 right-2  rounded-full flex items-center justify-center">
+         <button class="bookmark  group custom-bg-opacity hover:bg-white  hover:text-black bg-opacity-5 absolute h-10 w-10 top-2 right-2  rounded-full flex items-center justify-center">
             <img :src="bookmarked " alt="" class="group-hover:text-black h-4 w-4 ">
         </button>
 
-          <button class="absolute opacity-0 group-hover:opacity-100 group-hover:cursor-pointer left-[40px] top-10 lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
+          <button class="absolute  opacity-0 group-hover:opacity-100 transition  ease-in-out group-hover:cursor-pointer left-[40px] top-10 md:left-[65px]  md:top-[45px]  lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
             Play 
           </button>
 
@@ -32,8 +32,8 @@
       </div>
     </main>
   </template>
-  
   <script setup>
+  
   import { useDataStore } from '@/stores/data'
   import { onMounted, computed } from 'vue'
 import bookmark from '@/assets/icon-nav-bookmark.svg'

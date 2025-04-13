@@ -22,7 +22,7 @@
           <img :src="list.isBookmarked === true ? bookmarkedIcon : bookmarkIcon" alt="" class="group-hover:text-black h-4 w-4 ">
       </button>
 
-        <button class="absolute opacity-0 group-hover:opacity-100 group-hover:cursor-pointer left-[40px] top-10 lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
+        <button class="absolute opacity-0 group-hover:opacity-100 group-hover:cursor-pointer left-[40px] top-10 md:left-[70px] md:top-13 lg:top-17 lg:left-[90px] h-[45px] w-[85px] lg:w-[100px] rounded-full custom-white-opacity bg-opacity-[20]">
           Play 
         </button>
 
